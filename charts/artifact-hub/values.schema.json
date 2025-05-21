@@ -106,6 +106,12 @@
                             "default": {},
                             "$ref": "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.19.0/_definitions.json#/definitions/io.k8s.api.core.v1.ResourceRequirements"
                         },
+                        "extraEnvVars": {
+                            "title": "Extra environment variables",
+                            "description": "Optionally specify extra list of environment variables for the dbMigrator job",
+                            "type": "array",
+                            "default": "[]"
+                        },
                         "securityContext": {
                             "title": "DB migrator pod security context",
                             "type": "object",
@@ -296,6 +302,12 @@
                         "extraVolumeMounts": {
                             "title": "Extra volume mounts",
                             "description": "Optionally specify extra list of additional volume mounts for the hub deployment",
+                            "type": "array",
+                            "default": "[]"
+                        },
+                        "extraEnvVars": {
+                            "title": "Extra environment variables",
+                            "description": "Optionally specify extra list of environment variables for the hub deployment",
                             "type": "array",
                             "default": "[]"
                         },
@@ -1047,6 +1059,12 @@
                             "type": "array",
                             "default": "[]"
                         },
+                        "extraEnvVars": {
+                            "title": "Extra environment variables",
+                            "description": "Optionally specify extra list of environment variables for the scanner cronjob",
+                            "type": "array",
+                            "default": "[]"
+                        },
                         "image": {
                             "type": "object",
                             "properties": {
@@ -1171,6 +1189,12 @@
                             "type": "array",
                             "default": "[]"
                         },
+                        "extraEnvVars": {
+                            "title": "Extra environment variables",
+                            "description": "Optionally specify extra list of environment variables for the tracker cronjob",
+                            "type": "array",
+                            "default": "[]"
+                        },
                         "image": {
                             "type": "object",
                             "properties": {
@@ -1286,6 +1310,12 @@
                         "extraVolumeMounts": {
                             "title": "Extra volume mounts",
                             "description": "Optionally specify extra list of additional volume mounts for the trivy deployment",
+                            "type": "array",
+                            "default": "[]"
+                        },
+                        "extraEnvVars": {
+                            "title": "Extra environment variables",
+                            "description": "Optionally specify extra list of environment variables for the trivy deployment",
                             "type": "array",
                             "default": "[]"
                         },

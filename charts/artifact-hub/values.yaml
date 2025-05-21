@@ -105,6 +105,8 @@ dbMigrator:
     #   requests:
     #     cpu: 100m
     #     memory: 128Mi
+    # Optionally specify extra list of environment variables for the dbMigrator job
+    extraEnvVars: []
     # Optionally specify a node selector for the dbMigrator pod
     nodeSelector: {}
   # Load demo user and sample repositories
@@ -188,6 +190,8 @@ hub:
     extraVolumes: []
     # Optionally specify extra list of additional volume mounts for the hub deployment
     extraVolumeMounts: []
+    # Optionally specify extra list of environment variables for the hub deployment
+    extraEnvVars: []
     # Optionally specify a node selector for the hub deployment
     nodeSelector: {}
     # Optionally specify extra list of additional containers for the hub deployment
@@ -338,6 +342,8 @@ scanner:
     extraVolumes: []
     # Optionally specify extra list of additional volume mounts for the scanner cronjob
     extraVolumeMounts: []
+    # Optionally specify extra list of environment variables for the scanner cronjob
+    extraEnvVars: []
     # Optionally specify a node selector for the scanner cronjob
     nodeSelector: {}
   # Number of snapshots to process concurrently
@@ -376,6 +382,8 @@ tracker:
     extraVolumes: []
     # Optionally specify extra list of additional volume mounts for the tracker cronjob
     extraVolumeMounts: []
+    # Optionally specify extra list of environment variables for the tracker cronjob
+    extraEnvVars: []
     # Optionally specify a node selector for the tracker cronjob
     nodeSelector: {}
   # Cache directory path. If set, the cache directory for the Helm client will be explicitly set (otherwise defaults
@@ -417,6 +425,8 @@ trivy:
     extraVolumes: []
     # Optionally specify extra list of additional volume mounts for the trivy deployment
     extraVolumeMounts: []
+    # Optionally specify extra list of environment variables for the trivy deployment
+    extraEnvVars: []
     # Optionally specify a node selector for the trivy deployment
     nodeSelector: {}
   persistence:

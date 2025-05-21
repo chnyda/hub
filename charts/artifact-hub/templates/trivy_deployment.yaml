@@ -38,6 +38,10 @@ spec:
         - name: trivy
           image: {{ .Values.trivy.deploy.image }}
           command: ['trivy', '--debug', '--cache-dir', '/trivy', 'server', '--listen', '0.0.0.0:8081']
+          {{- with .Values.trivy.deploy.extraEnvVars }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
           volumeMounts:
             - name: trivy
               mountPath: "/trivy"
